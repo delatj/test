@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hotpot-jmatch-file>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="">
+    <dc:creator>CAS</dc:creator>
+    <dc:creator>UNREGISTERED</dc:creator>
+    <dc:title>TEMA: ELECTR&amp;#x00D3;NICA QUI&amp;#x00C9;N 1</dc:title>
+  </rdf:Description>
+</rdf:RDF><version>7</version>
+
+<data>
+<title>TEMA: ELECTR&amp;#x00D3;NICA QUI&amp;#x00C9;N 1</title>
+
+<timer><seconds>180</seconds><include-timer>1</include-timer></timer>
+
+<reading>
+<include-reading>0</include-reading>
+<reading-title></reading-title>
+<reading-text></reading-text>
+
+</reading>
+
+<matching-exercise>
+<default-right-item></default-right-item>
+
+<pair>
+<left-item><text>LDR</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;ldr.jpg&quot; alt=&quot;ldr.jpg&quot; title=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>NTC</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;ntc.jpg&quot; alt=&quot;ntc.jpg&quot; title=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>PTC</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;ptc.jpg&quot; alt=&quot;ptc.jpg&quot; title=&quot;&quot; width=&quot;117&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Potenci&amp;#x00F3;metro</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;potenciometro.jpg&quot; alt=&quot;potenciometro.jpg&quot; title=&quot;&quot; width=&quot;89&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Transistor</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;transistor.jpg&quot; alt=&quot;transistor.jpg&quot; title=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Condensador no polarizado</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;condensadornopolarizado.jpg&quot; alt=&quot;condensadornopolarizado.jpg&quot; title=&quot;&quot; width=&quot;107&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Condensador polarizado o electrol&amp;#x00ED;tico</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;condensadorelectrolitico.jpg&quot; alt=&quot;condensadorelectrolitico.jpg&quot; title=&quot;&quot; width=&quot;107&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Diodo</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;diodo1.png&quot; alt=&quot;diodo1.png&quot; title=&quot;&quot; width=&quot;207&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Resistencia fija</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;ejemploresistencia2.jpg&quot; alt=&quot;ejemploresistencia2.jpg&quot; title=&quot;&quot; width=&quot;130&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Diodo LED</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;diodo led.jpg&quot; alt=&quot;diodo led.jpg&quot; title=&quot;&quot; width=&quot;55&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Circuito integrado</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;circuitointegrado.png&quot; alt=&quot;circuitointegrado.png&quot; title=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+</matching-exercise>
+</data>
+
+<hotpot-config-file>
+<jmatch>
+<exercise-subtitle>&amp;#x00BF;Qui&amp;#x00E9;n es qui&amp;#x00E9;n?</exercise-subtitle>
+<instructions>Une cada componente electr&amp;#x00F3;nico con su imagen correspondiente</instructions>
+<next-ex-url>nextpage.htm</next-ex-url>
+<send-email>0</send-email>
+<show-limited-questions>0</show-limited-questions>
+<questions-to-show>1</questions-to-show>
+<shuffle-questions>1</shuffle-questions>
+<separate-javascript-file>0</separate-javascript-file>
+<next-caption>Next</next-caption>
+<delete-caption>Delete</delete-caption>
+<guess-correct>Correto</guess-correct>
+<guess-incorrect>Incorrecto</guess-incorrect>
+</jmatch>
+
+<global>
+<your-score-is>Tu puntuaci&amp;#x00F3;n es:</your-score-is>
+<correct-indicator></correct-indicator>
+<incorrect-indicator></incorrect-indicator>
+<process-for-rtl>0</process-for-rtl>
+<include-scorm-12>0</include-scorm-12>
+<times-up>SU TIEMPO HA TERMINADO</times-up>
+<check-caption>Pica aqui para validar tus respuestas</check-caption>
+<ok-caption>OK</ok-caption>
+<next-ex-caption>=&amp;#x003E;</next-ex-caption>
+<back-caption>&amp;#x003C;=</back-caption>
+<contents-caption>Index</contents-caption>
+<include-next-ex>0</include-next-ex>
+<include-contents>0</include-contents>
+<include-back>0</include-back>
+<contents-url>contents.htm</contents-url>
+<graphic-url></graphic-url>
+<font-face>Geneva,Arial,sans-serif</font-face>
+<font-size>small</font-size>
+<page-bg-color>#804040</page-bg-color>
+<title-color>#ffffff</title-color>
+<ex-bg-color>#ffffff</ex-bg-color>
+<text-color>#000000</text-color>
+<link-color>#0000FF</link-color>
+<vlink-color>#0000CC</vlink-color>
+<nav-bar-color>#000000</nav-bar-color>
+<formmail-url>http://yourserver.com/cgi-bin/FormMail.pl</formmail-url>
+<email>you@yourserver.com</email>
+<name-please>Please enter your name:</name-please>
+<user-string-1>one</user-string-1>
+<user-string-2>two</user-string-2>
+<user-string-3>three</user-string-3>
+<header-code></header-code>
+</global>
+</hotpot-config-file>
+</hotpot-jmatch-file>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hotpot-jmatch-file>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="">
+    <dc:creator>CAS</dc:creator>
+    <dc:creator>Ies Arboleda</dc:creator>
+    <dc:creator>UNREGISTERED</dc:creator>
+    <dc:title>TEMA: ENERG&amp;#x00CD;A QUI&amp;#x00C9;N</dc:title>
+  </rdf:Description>
+</rdf:RDF><version>7</version>
+
+<data>
+<title>TEMA: ENERG&amp;#x00CD;A QUI&amp;#x00C9;N</title>
+
+<timer><seconds>180</seconds><include-timer>1</include-timer></timer>
+
+<reading>
+<include-reading>0</include-reading>
+<reading-title></reading-title>
+<reading-text></reading-text>
+
+</reading>
+
+<matching-exercise>
+<default-right-item></default-right-item>
+
+<pair>
+<left-item><text>T&amp;#x00E9;rmica</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;termica.jpg&quot; alt=&quot;termica.jpg&quot; width=&quot;245&quot; height=&quot;120&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Fotovoltaica</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;fotovoltaica.jpg&quot; alt=&quot;fotovoltaica.jpg&quot; width=&quot;160&quot; height=&quot;120&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Fotot&amp;#x00E9;rmica</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;fototermica.jpg&quot; alt=&quot;fototermica.jpg&quot; width=&quot;181&quot; height=&quot;120&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>E&amp;#x00F3;lica</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;eolica.jpg&quot; alt=&quot;eolica.jpg&quot; width=&quot;203&quot; height=&quot;120&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Hidroel&amp;#x00E9;ctrica</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;hidroelectrica.jpg&quot; alt=&quot;hidroelectrica.jpg&quot; width=&quot;177&quot; height=&quot;120&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+
+<pair>
+<left-item><text>Nuclear</text>
+<fixed>1</fixed>
+</left-item>
+<right-item><text>&amp;#x003C;img src=&quot;nuclear.jpg&quot; alt=&quot;nuclear.jpg&quot; width=&quot;245&quot; height=&quot;120&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; text-align: center;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;</text>
+<fixed>0</fixed>
+</right-item></pair>
+</matching-exercise>
+</data>
+
+<hotpot-config-file>
+<jmatch>
+<exercise-subtitle>&amp;#x00BF;Qui&amp;#x00E9;n es qui&amp;#x00E9;n?</exercise-subtitle>
+<instructions>Une cada central el&amp;#x00E9;ctrica con su dibujo ejemplo</instructions>
+<next-ex-url>nextpage.htm</next-ex-url>
+<send-email>0</send-email>
+<show-limited-questions>0</show-limited-questions>
+<questions-to-show>1</questions-to-show>
+<shuffle-questions>1</shuffle-questions>
+<separate-javascript-file>0</separate-javascript-file>
+<next-caption>Next</next-caption>
+<delete-caption>Delete</delete-caption>
+<guess-correct>Correto</guess-correct>
+<guess-incorrect>Incorrecto</guess-incorrect>
+</jmatch>
+
+<global>
+<your-score-is>Tu puntuaci&amp;#x00F3;n es:</your-score-is>
+<correct-indicator></correct-indicator>
+<incorrect-indicator></incorrect-indicator>
+<process-for-rtl>0</process-for-rtl>
+<include-scorm-12>0</include-scorm-12>
+<times-up>SU TIEMPO HA TERMINADO</times-up>
+<check-caption>Pica aqu&amp;#x00ED; para validar tus respuestas</check-caption>
+<ok-caption>OK</ok-caption>
+<next-ex-caption>=&amp;#x003E;</next-ex-caption>
+<back-caption>&amp;#x003C;=</back-caption>
+<contents-caption>Index</contents-caption>
+<include-next-ex>0</include-next-ex>
+<include-contents>0</include-contents>
+<include-back>0</include-back>
+<contents-url>contents.htm</contents-url>
+<graphic-url></graphic-url>
+<font-face>Geneva,Arial,sans-serif</font-face>
+<font-size>small</font-size>
+<page-bg-color>#804040</page-bg-color>
+<title-color>#ffffff</title-color>
+<ex-bg-color>#ffffff</ex-bg-color>
+<text-color>#000000</text-color>
+<link-color>#0000FF</link-color>
+<vlink-color>#0000CC</vlink-color>
+<nav-bar-color>#000000</nav-bar-color>
+<formmail-url>http://yourserver.com/cgi-bin/FormMail.pl</formmail-url>
+<email>you@yourserver.com</email>
+<name-please>Please enter your name:</name-please>
+<user-string-1>one</user-string-1>
+<user-string-2>two</user-string-2>
+<user-string-3>three</user-string-3>
+<header-code></header-code>
+</global>
+</hotpot-config-file>
+</hotpot-jmatch-file>
