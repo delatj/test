@@ -4,16 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
 <meta name="dc:creator" content="casa" />
-<meta name="dc:creator" content="CAS" />
-<meta name="dc:creator" content="Ies Arboleda" />
-<meta name="dc:creator" content="usuario" />
-<meta name="dc:creator" content="cas" />
-<meta name="dc:title" content="TEMA: CONTROL Y ROB&#x00D3;TICA refuerzo" />
 
 
 
 <title>
-TEMA: CONTROL Y ROB&#x00D3;TICA refuerzo
+
 </title>
 
 <!-- Made with executable version 7.0 Release 1 Build 0 -->
@@ -46,12 +41,12 @@ TEMA: CONTROL Y ROB&#x00D3;TICA refuerzo
 	--strLinkColor:      #0000ff;
 	--strVLinkColor:     #ff00ff;
 	
-	--strNavBarColor:    #ff8040;
-	--strNavLightColor:  #ffbf9f;
-	--strNavShadeColor:  #7f4020;
+	--strNavBarColor:    #80ff80;
+	--strNavLightColor:  #bfffbf;
+	--strNavShadeColor:  #407f40;
 	--strNavTextColor:   #000000;
 	
-	--strPageBGColor:    #69bdd6;
+	--strPageBGColor:    #8080ff;
 	--strExBGColor:      #dddddd;
 }
 
@@ -957,30 +952,30 @@ function ClearTextBoxes(){
 //JQUIZ CORE JAVASCRIPT CODE
 
 var CurrQNum = 0;
-var CorrectIndicator = ' ';
-var IncorrectIndicator = ' ';
-var YourScoreIs = 'Tu puntuaci&#x00F3;n es:';
+var CorrectIndicator = '&#x2714;';
+var IncorrectIndicator = '&#x2718;';
+var YourScoreIs = 'Your score is ';
 
 //New for 6.2.2.0
 var CompletedSoFar = 'Questions completed so far: ';
 var ExerciseCompleted = 'You have completed the exercise.';
 var ShowCompletedSoFar = true;
 
-var ContinuousScoring = false;
-var CorrectFirstTime = 'El n&#x00FA;mero de respuestas acertadas ha sido:';
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Questions answered correctly first time: ';
 var ShowCorrectFirstTime = true;
-var ShuffleQs = true;
-var ShuffleAs = true;
-var DefaultRight = 'Pica en la siguiente pregunta';
-var DefaultWrong = 'Pica en la siguiente pregunta';
-var QsToShow = 27;
+var ShuffleQs = false;
+var ShuffleAs = false;
+var DefaultRight = 'Correct!';
+var DefaultWrong = 'Sorry! Try again.';
+var QsToShow = 0;
 var Score = 0;
 var Finished = false;
 var Qs = null;
 var QArray = new Array();
 var ShowingAllQuestions = false;
-var ShowAllQuestionsCaption = ' ';
-var ShowOneByOneCaption = 'Responde la preguntas de una en una';
+var ShowAllQuestionsCaption = 'Show all questions';
+var ShowOneByOneCaption = 'Show questions one by one';
 var State = new Array();
 var Feedback = '';
 var TimeOver = false;
@@ -1156,182 +1151,6 @@ function SetQNumReadout(){
 }
 
 var I=new Array();
-I[0]=new Array();I[0][0]=100;
-I[0][1]='';
-I[0][2]='1';
-I[0][3]=new Array();
-I[0][3][0]=new Array('trabajador','',1,100,1);
-I[1]=new Array();I[1][0]=100;
-I[1][1]='';
-I[1][2]='1';
-I[1][3]=new Array();
-I[1][3][0]=new Array('informaci\u00F3n','',1,100,1);
-I[2]=new Array();I[2][0]=100;
-I[2][1]='';
-I[2][2]='0';
-I[2][3]=new Array();
-I[2][3][0]=new Array('M\u00E1quina colocadora de tapones de botellas','',1,100,1);
-I[2][3][1]=new Array('M\u00E1quina que suelda un coche','',0,0,1);
-I[2][3][2]=new Array('M\u00E1quina que pinta un coche','',0,0,1);
-I[2][3][3]=new Array('M\u00E1quina lavacoches','',0,0,1);
-I[3]=new Array();I[3][0]=100;
-I[3][1]='';
-I[3][2]='0';
-I[3][3]=new Array();
-I[3][3][0]=new Array('La funci\u00F3n de los sistemas de control es detectar alguna condici\u00F3n del entorno.','',0,0,1);
-I[3][3][1]=new Array('Los sistemas de control detectan: luz, temperatura, contacto, humedad,\u2026','',0,0,1);
-I[3][3][2]=new Array('Los sistemas de control en funci\u00F3n de los valores que detecta, realiza alguna acci\u00F3n.','',0,0,1);
-I[3][3][3]=new Array('El valor de la se\u00F1al de entrada en los sistemas de control es comparado con un valor prefijado, llamado punto de corte.','',1,100,1);
-I[4]=new Array();I[4][0]=100;
-I[4][1]='';
-I[4][2]='1';
-I[4][3]=new Array();
-I[4][3][0]=new Array('sensor','',1,100,1);
-I[5]=new Array();I[5][0]=100;
-I[5][1]='';
-I[5][2]='0';
-I[5][3]=new Array();
-I[5][3][0]=new Array('LDR','',0,0,1);
-I[5][3][1]=new Array('JTC','',1,100,1);
-I[5][3][2]=new Array('BPW40:emisor y receptor de inflarrojos.','',0,0,1);
-I[5][3][3]=new Array('Final de carrera.','',0,0,1);
-I[6]=new Array();I[6][0]=100;
-I[6][1]='';
-I[6][2]='1';
-I[6][3]=new Array();
-I[6][3][0]=new Array('referencia','',1,100,1);
-I[7]=new Array();I[7][0]=100;
-I[7][1]='';
-I[7][2]='1';
-I[7][3]=new Array();
-I[7][3][0]=new Array('comparador','',1,100,1);
-I[8]=new Array();I[8][0]=100;
-I[8][1]='';
-I[8][2]='1';
-I[8][3]=new Array();
-I[8][3][0]=new Array('salida','',1,100,1);
-I[9]=new Array();I[9][0]=100;
-I[9][1]='';
-I[9][2]='1';
-I[9][3]=new Array();
-I[9][3][0]=new Array('actuador','',1,100,1);
-I[9][3][1]=new Array('','',1,100,1);
-I[10]=new Array();I[10][0]=100;
-I[10][1]='';
-I[10][2]='1';
-I[10][3]=new Array();
-I[10][3][0]=new Array('abierto','',1,100,1);
-I[10][3][1]=new Array('','',1,100,1);
-I[11]=new Array();I[11][0]=100;
-I[11][1]='';
-I[11][2]='1';
-I[11][3]=new Array();
-I[11][3][0]=new Array('cerrado','',1,100,1);
-I[12]=new Array();I[12][0]=100;
-I[12][1]='';
-I[12][2]='0';
-I[12][3]=new Array();
-I[12][3][0]=new Array('La regulaci\u00F3n de la calefacci\u00F3n de una habitaci\u00F3n con un sistema de relojer\u00EDa.','',0,0,1);
-I[12][3][1]=new Array('El llenado de un dep\u00F3sito con un grifo que abre durante un tiempo determinado.','',0,0,1);
-I[12][3][2]=new Array('La programaci\u00F3n de un v\u00EDdeo a las horas prefijadas.','',0,0,1);
-I[12][3][3]=new Array('El control de temperatura de una habitaci\u00F3n con un termostato.','',1,100,1);
-I[13]=new Array();I[13][0]=100;
-I[13][1]='';
-I[13][2]='0';
-I[13][3]=new Array();
-I[13][3][0]=new Array('Control de llenado de un dep\u00F3sito con dos sensores de nivel, uno que detecta cu\u00E1ndo est\u00E1 vac\u00EDo el dep\u00F3sito y otro que detecta cu\u00E1ndo est\u00E1 lleno.','',0,0,1);
-I[13][3][1]=new Array('Un autolavado de coches.','',0,0,1);
-I[13][3][2]=new Array('El sistema de climatizaci\u00F3n de un coche.','',0,0,1);
-I[13][3][3]=new Array('La programaci\u00F3n de riego de un jard\u00EDn de 8 a 9 de la ma\u00F1ana.','',1,100,1);
-I[14]=new Array();I[14][0]=100;
-I[14][1]='';
-I[14][2]='0';
-I[14][3]=new Array();
-I[14][3][0]=new Array('Se\u00F1al de salida','',0,0,1);
-I[14][3][1]=new Array('Se\u00F1al de referencia','',0,0,1);
-I[14][3][2]=new Array('Se\u00F1al de entrada','',0,0,1);
-I[14][3][3]=new Array('Se\u00F1al de toma','',1,100,1);
-I[15]=new Array();I[15][0]=100;
-I[15][1]='';
-I[15][2]='0';
-I[15][3]=new Array();
-I[15][3][0]=new Array('Comparador.','',0,0,1);
-I[15][3][1]=new Array('Elemento de control','',0,0,1);
-I[15][3][2]=new Array('Realimentaci\u00F3n','',0,0,1);
-I[15][3][3]=new Array('Activador','',1,100,1);
-I[16]=new Array();I[16][0]=100;
-I[16][1]='';
-I[16][2]='0';
-I[16][3]=new Array();
-I[16][3][0]=new Array('Se utilizan en procesos en los que la intervenci\u00F3n humana es tremendamente arriesgada.','',0,0,1);
-I[16][3][1]=new Array('Se utilizan en procesos en los que se requiere una precisi\u00F3n extrema.','',0,0,1);
-I[16][3][2]=new Array('Realizan las tareas en lugar de las personas.','',0,0,1);
-I[16][3][3]=new Array('El uso de robots controlados mediante sofisticados programas de software ha sido esencial en la antigua industria.','',1,100,1);
-I[17]=new Array();I[17][0]=100;
-I[17][1]='';
-I[17][2]='0';
-I[17][3]=new Array();
-I[17][3][0]=new Array('Piezas r\u00EDgidas.','',0,0,1);
-I[17][3][1]=new Array('Articulaciones.','',0,0,1);
-I[17][3][2]=new Array('Actuadores.','',0,0,1);
-I[17][3][3]=new Array('Activadores.','',1,100,1);
-I[18]=new Array();I[18][0]=100;
-I[18][1]='';
-I[18][2]='1';
-I[18][3]=new Array();
-I[18][3][0]=new Array('articulaciones','',1,100,1);
-I[19]=new Array();I[19][0]=100;
-I[19][1]='';
-I[19][2]='1';
-I[19][3]=new Array();
-I[19][3][0]=new Array('actuadores','',1,100,1);
-I[20]=new Array();I[20][0]=100;
-I[20][1]='';
-I[20][2]='0';
-I[20][3]=new Array();
-I[20][3][0]=new Array('Sistemas neum\u00E1ticos','',0,0,1);
-I[20][3][1]=new Array('Sistemas el\u00E9ctricos','',0,0,1);
-I[20][3][2]=new Array('Sistemas hidr\u00E1ulicos','',0,0,1);
-I[20][3][3]=new Array('Sistemas mec\u00E1nicos','',1,100,1);
-I[21]=new Array();I[21][0]=100;
-I[21][1]='';
-I[21][2]='1';
-I[21][3]=new Array();
-I[21][3][0]=new Array('herramienta','',1,100,1);
-I[22]=new Array();I[22][0]=100;
-I[22][1]='';
-I[22][2]='0';
-I[22][3]=new Array();
-I[22][3][0]=new Array('Un destornillador','',0,0,1);
-I[22][3][1]=new Array('Un soldador','',0,0,1);
-I[22][3][2]=new Array('Una pistola con pintura','',0,0,1);
-I[22][3][3]=new Array('Las ruedas de una cinta transportadora','',1,100,1);
-I[23]=new Array();I[23][0]=100;
-I[23][1]='';
-I[23][2]='0';
-I[23][3]=new Array();
-I[23][3][0]=new Array('La electr\u00F3nica','',0,0,1);
-I[23][3][1]=new Array('La mec\u00E1nica','',0,0,1);
-I[23][3][2]=new Array('El propio funcionamiento','',0,0,1);
-I[23][3][3]=new Array('La fuente de energ\u00EDa','',1,100,1);
-I[24]=new Array();I[24][0]=100;
-I[24][1]='';
-I[24][2]='0';
-I[24][3]=new Array();
-I[24][3][0]=new Array('La alimentaci\u00F3n del circuito.','',0,0,1);
-I[24][3][1]=new Array('El par Darlington.','',0,0,1);
-I[24][3][2]=new Array('Los sensores.','',0,0,1);
-I[24][3][3]=new Array('El actuador','',1,100,1);
-I[25]=new Array();I[25][0]=100;
-I[25][1]='';
-I[25][2]='1';
-I[25][3]=new Array();
-I[25][3][0]=new Array('condensador','',1,100,1);
-I[26]=new Array();I[26][0]=100;
-I[26][1]='';
-I[26][2]='1';
-I[26][3]=new Array();
-I[26][3][0]=new Array('aumentar','',1,100,1);
 
 
 function StartUp(){
@@ -1356,8 +1175,6 @@ function StartUp(){
 	ClearTextBoxes();
 	CreateStatusArray();
 	
-
-	setTimeout('StartTimer()', 50);
 
 	
 //Check search string for q parameter
@@ -1418,168 +1235,6 @@ function CreateStatusArray(){
 		else{
 			State[QNum] = null;
 		}
-	}
-}
-
-
-
-function CheckMCAnswer(QNum, ANum, Btn){
-//if question doesn't exist, bail
-	if (State[QNum].length < 1){return;}
-	
-//Get the feedback
-	Feedback = I[QNum][3][ANum][1];
-	
-//Now show feedback and bail if question already complete
-	if (State[QNum][0] > -1){
-//Add an extra message explaining that the question
-// is finished if defined by the user
-		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
-//Show the feedback
-		ShowMessage(Feedback);
-//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
-//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
-		return;
-	}
-	
-//Hide the button while processing
-	Btn.style.display = 'none';
-
-//Increment the number of tries
-	State[QNum][2]++;
-	
-//Add the percent-correct value of this answer
-	State[QNum][3] += I[QNum][3][ANum][3];
-	
-//Store the try number in the answer part of the State array, for tracking purposes
-	State[QNum][1][ANum] = State[QNum][2];
-	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
-	State[QNum][5] += String.fromCharCode(65+ANum);
-	
-//Should this answer be accepted as correct?
-	if (I[QNum][3][ANum][2] < 1){
-//It's wrong
-
-//Mark the answer
-		Btn.innerHTML = IncorrectIndicator;
-		
-//Remove any previous score unless exercise is finished (6.0.3.8+)
-		if (Finished == false){
-			WriteToInstructions(strInstructions);
-		}	
-		
-//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
-		var RemainingAnswer = FinalAnswer(QNum);
-		if (RemainingAnswer > -1){
-//Behave as if the last answer had been selected, but give no credit for it
-//Increment the number of tries
-			State[QNum][2]++;		
-		
-//Calculate the score for this question
-			CalculateMCQuestionScore(QNum);
-			
-//Get the overall score and add it to the feedback
-			CalculateOverallScore();
-//New for 6.2.2.1
-			var QsDone = CheckQuestionsCompleted();
-			if ((ContinuousScoring == true)||(Finished == true)){
-				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
-				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
-			}
-			else{
-				WriteToInstructions(QsDone);
-			}
-		}
-	}
-	else{
-//It's right
-//Mark the answer
-		Btn.innerHTML = CorrectIndicator;
-				
-//Calculate the score for this question
-		CalculateMCQuestionScore(QNum);
-		
-//New for 6.2.2.0
-		var QsDone = CheckQuestionsCompleted();
-
-//Get the overall score and add it to the feedback
-		if (ContinuousScoring == true){
-			CalculateOverallScore();
-			if ((ContinuousScoring == true)||(Finished == true)){
-				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
-				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
-			}
-		}
-		else{
-			WriteToInstructions(QsDone);
-		}
-	}
-	
-//Show the button again
-	Btn.style.display = 'inline';
-	
-//Finally, show the feedback	
-	ShowMessage(Feedback);
-	
-//Check whether all questions are now done
-	CheckFinished();
-}
-
-function CalculateMCQuestionScore(QNum){
-	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
-	var PercentCorrect = State[QNum][3];
-	var TotAns = GetTotalMCAnswers(QNum);
-	var HintPenalties = State[QNum][4];
-	
-//Make sure it's not already complete
-
-	if (State[QNum][0] < 0){
-//Allow for Hybrids
-		if (HintPenalties >= 1){
-			State[QNum][0] = 0;
-		}
-		else{
-//This line calculates the score for this question
-			if (TotAns == 1){
-				State[QNum][0] = 1;
-			}
-			else{
-				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
-			}
-		}
-//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
-		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
-			State[QNum][0] = 0;
-		}
-	}
-}
-
-function GetTotalMCAnswers(QNum){
-	var Result = 0;
-	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
-		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
-			Result++;
-		}
-	}
-	return Result;
-}
-
-function FinalAnswer(QNum){
-	var UnchosenAnswers = 0;
-	var FinalAnswer = -1;
-	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
-		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
-			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
-				UnchosenAnswers++;
-				FinalAnswer = ANum;
-			}
-		}
-	}
-	if (UnchosenAnswers == 1){
-		return FinalAnswer;
-	}
-	else{
-		return -1;
 	}
 }
 
@@ -1663,8 +1318,6 @@ function CheckFinished(){
 		
 		Finished == true;
 
-		window.clearInterval(Interval);
-
 
 
 
@@ -1688,391 +1341,8 @@ function CheckFinished(){
 }
 
 
-function TimesUp(){
-	document.getElementById('Timer').innerHTML = 'SU TIEMPO HA TERMINADO';
-
-	TimeOver = true;
-	Finished = true;
-	ShowMessage('SU TIEMPO HA TERMINADO');
-	
-//Set all remaining scores to 0
-	for (var QNum=0; QNum<State.length; QNum++){
-		if (State[QNum] != null){
-			if (State[QNum][0] < 0){
-				State[QNum][0] = 0;
-			}
-		}
-	}
-	CheckFinished();
-}
 
 
-
-
-//CORE CODE FOR CHECKING SHORT ANSWER GUESSES AGAINST ANSWER ARRAYS
-
-var CaseSensitive = false;
-var ShowAlsoCorrect = false;
-var PleaseEnter = ' ';
-var HybridTries = 2;
-var PartlyIncorrect = ' ';
-var CorrectList = 'Respuestas correctas:';
-var NextCorrect = ' ';
-var CurrBox = null;
-
-function TrackFocus(BoxID){
-	InTextBox = true;
-	CurrBox = document.getElementById(BoxID);
-}
-
-function LeaveGap(){
-	InTextBox = false;
-}
-
-function TypeChars(Chars){
-	if (CurrBox != null){
-		if (CurrBox.style.display != 'none'){
-			var selObj = SelObj(CurrBox);
-			selObj.setSelText(Chars);
-		}
-	}
-}
-
-function CheckGuess(Guess, Answer, CaseSensitive, PercentCorrect, Feedback){
-	this.Guess = Guess;
-	this.Answer = Answer;
-	this.PercentCorrect = PercentCorrect;
-	this.Feedback = Feedback;
-	if (CaseSensitive == false){
-		this.WorkingGuess = Guess.toLowerCase();
-		this.WorkingAnswer = Answer.toLowerCase();
-	}
-	else{
-		this.WorkingGuess = Guess;
-		this.WorkingAnswer = Answer;				
-	}
-	this.Hint = '';
-	this.HintPenalty = 1/Answer.length;
-	this.CorrectStart = '';
-	this.WrongMiddle = '';
-	this.CorrectEnd = '';
-	this.PercentMatch = 0;
-	this.DoCheck();
-}
-
-function CheckGuess_DoCheck(){
-//Check if it's an exact match
-	if (this.WorkingAnswer == this.WorkingGuess){
-		this.PercentMatch = 100;
-		this.CorrectStart = this.Guess;
-	return;
-	}
-//Figure out how much of the beginning is correct
-	var i = 0;
-	var CorrectChars = 0;
-	while (this.WorkingAnswer.charAt(i) == this.WorkingGuess.charAt(i)){
-		i++;
-		CorrectChars++;
-	}
-//Stash the hint
-	this.Hint = this.Answer.charAt(i);
-	
-	this.CorrectStart = this.Guess.substring(0, i);
-	
-//If there's more to the answer, look at the rest of it
-	if (i<this.Guess.length){
-	
-//Figure out how much of the end is correct
-		var j = this.WorkingGuess.length-1;
-		var k = this.WorkingAnswer.length-1;
-		while ((j>=i)&&((this.WorkingAnswer.charAt(k) == this.WorkingGuess.charAt(j))&&(CorrectChars < this.Answer.length))){
-			CorrectChars++;
-			j--;
-			k--;
-		}
-		this.CorrectEnd = this.Guess.substring(j+1, this.Guess.length);
-		this.WrongMiddle = this.Guess.substring(i, j+1);
-	}
-	if (TrimString(this.WrongMiddle).length < 1){this.WrongMiddle = '_';}
-//Calculate match score based on how much of the guess is correct
-	if (CorrectChars < this.Answer.length){
-		this.PercentMatch = Math.floor(100*CorrectChars)/this.Answer.length;
-	}
-	else{
-		this.PercentMatch = Math.floor((100 * CorrectChars)/this.Guess.length);
-	}	
-}
-
-CheckGuess.prototype.DoCheck = CheckGuess_DoCheck;
-
-function CheckAnswerArray(CaseSensitive){
-	this.CaseSensitive = CaseSensitive;
-	this.Answers = new Array();
-	this.Score = 0;
-	this.Feedback = '';
-	this.Hint = '';
-	this.HintPenalty = 0;
-	this.MatchedAnswerLength = 1;
-	this.CompleteMatch = false;
-	this.MatchNum = -1;
-}
-
-function CheckAnswerArray_AddAnswer(Guess, Answer, PercentCorrect, Feedback){
-	this.Answers.push(new CheckGuess(Guess, Answer, this.CaseSensitive, PercentCorrect, Feedback));
-}
-
-CheckAnswerArray.prototype.AddAnswer = CheckAnswerArray_AddAnswer;
-
-function CheckAnswerArray_ClearAll(){
-	this.Answers.length = 0;
-}
-
-CheckAnswerArray.prototype.ClearAll = CheckAnswerArray_ClearAll;
-
-function CheckAnswerArray_GetBestMatch(){
-//First check for a 100% match
-	for (var i=0; i<this.Answers.length; i++){
-		if (this.Answers[i].PercentMatch == 100){
-			this.Feedback = this.Answers[i].Feedback;
-			this.Score = this.Answers[i].PercentCorrect;
-			this.CompleteMatch = true;
-			this.MatchNum = i;
-			return;
-		}
-	}
-//Now check for the best alternative match
-	var PercentMatch = 0;
-	var BestMatch = -1;
-	for (i=0; i<this.Answers.length; i++){
-		if ((this.Answers[i].PercentMatch > PercentMatch)&&(this.Answers[i].PercentCorrect == 100)){
-			BestMatch = i;
-			PercentMatch = this.Answers[i].PercentMatch;
-		}
-	}
-	if (BestMatch > -1){
-		this.Score = this.Answers[BestMatch].PercentMatch;
-		this.Feedback = PartlyIncorrect + ' ';
-		this.Feedback += '<span class="PartialAnswer">' + this.Answers[BestMatch].CorrectStart;
-		this.Feedback += '<span class="Highlight">' + this.Answers[BestMatch].WrongMiddle + '</span>';
-		this.Feedback += this.Answers[BestMatch].CorrectEnd + '</span>';
-		this.Hint = '<span class="PartialAnswer">' + this.Answers[BestMatch].CorrectStart;
-		this.Hint += '<span class="Highlight">' + this.Answers[BestMatch].Hint + '</span></span>';
-		this.HintPenalty = this.Answers[BestMatch].HintPenalty;
-	}
-	else{
-		this.Score = 0;
-		this.Feedback = '';
-	}
-}
-
-CheckAnswerArray.prototype.GetBestMatch = CheckAnswerArray_GetBestMatch;
-
-function CheckShortAnswer(QNum){
-//bail if question doesn't exist or exercise finished
-	if ((State[QNum].length < 1)||(Finished == true)){return;}
-	
-//bail if question already complete
-	if (State[QNum][0] > -1){return;}
-
-//Get the guess (TrimString added to fix bug for 6.0.4.3)
-	var G = TrimString(document.getElementById('Q_' + QNum + '_Guess').value);
-	
-//If no guess, bail with message; no penalty
-	if (G.length < 1){
-		ShowMessage(PleaseEnter);
-		return;
-	}
-
-//Increment tries
-	State[QNum][2]++;
-	
-//Create a check object
-	var CA = new CheckAnswerArray(CaseSensitive);
-
-	CA.ClearAll();
-	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
-		CA.AddAnswer(G, I[QNum][3][ANum][0], I[QNum][3][ANum][3], I[QNum][3][ANum][1]);
-	}
-	CA.GetBestMatch();
-	
-//Store any match in the state tracking field
-	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
-	if (CA.MatchNum > -1){
-		State[QNum][5] += String.fromCharCode(65+CA.MatchNum);
-	}
-//Else store the student's answer
-	else{
-		State[QNum][5] += G;
-	}
-
-//Add the percent correct value for this answer to the Q State (works for all
-//situations, wrong or right)
-	State[QNum][3] += CA.Score;
-	
-//Now branch, based on the nature of the match
-//Is it a complete match?
-	if (CA.CompleteMatch == true){
-		
-//Is it with a wrong answer, or a right answer?
-		if (CA.Score == 100){
-//It's right
-			CalculateShortAnsQuestionScore(QNum);
-			
-//New for 6.2.2.0
-			var QsDone = CheckQuestionsCompleted();
-			
-//Get correct answer list if required, assuming there are any other correct alternatives
-			if (ShowAlsoCorrect == true){
-				var AlsoCorrectList = GetCorrectList(QNum, G, false);
-				if (AlsoCorrectList.length > 0){
-					CA.Feedback += '<br />' + CorrectList + '<br />' + AlsoCorrectList;
-				}
-			}	
-		
-//Get the overall score and add it to the feedback
-			if (ContinuousScoring == true){
-				CalculateOverallScore();
-				CA.Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
-				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
-			}
-			else{
-				WriteToInstructions(QsDone);
-			}
-			ShowMessage(CA.Feedback);
-//Put the answer in
-			ReplaceGuessBox(QNum, G);
-			CheckFinished();
-			return;
-		}
-	}
-	
-//Otherwise, it's a match to a predicted wrong/partially correct, or a partial
-//match to a right answer
-	if (CA.Feedback.length < 1){CA.Feedback = DefaultWrong;}
-//Remove any previous score unless exercise is finished (6.0.3.8+)
-	if (Finished == false){
-		WriteToInstructions(strInstructions);
-	}	
-	ShowMessage(CA.Feedback);
-
-//If necessary, switch a hybrid question to m/c
-	if (State[QNum][2] >= HybridTries){
-		SwitchHybridDisplay(QNum);
-	}
-}
-
-function CalculateShortAnsQuestionScore(QNum){
-	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties;
-	var PercentCorrect = State[QNum][3];
-	var HintPenalties = State[QNum][4];
-
-//Make sure it's not already complete
-	if (State[QNum][0] < 0){
-		if (HintPenalties >= 1){
-			State[QNum][0] = 0;
-		}
-		else{
-			State[QNum][0] = (PercentCorrect/(100*Tries));
-		}
-		if (State[QNum][0] < 0){
-			State[QNum][0] = 0;
-		}
-	}
-}
-
-function SwitchHybridDisplay(QNum){
-	if (document.getElementById('Q_' + QNum + '_Hybrid_MC') != null){
-		document.getElementById('Q_' + QNum + '_Hybrid_MC').style.display = '';
-		if (document.getElementById('Q_' + QNum + '_SA') != null){
-			document.getElementById('Q_' + QNum + '_SA').style.display = 'none';
-		}
-	}
-}
-
-function GetCorrectArray(QNum){
-	var Result = new Array();
-	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
-		if (I[QNum][3][ANum][2] == 1){ //This is an acceptable correct answer
-			Result.push(I[QNum][3][ANum][0]);
-		}
-	}	
-	return Result;
-}
-
-function GetCorrectList(QNum, Answer, IncludeAnswer){
-	var As = GetCorrectArray(QNum);
-	var Result = '';
-	for (var ANum=0; ANum<As.length; ANum++){
-		if ((IncludeAnswer == true)||(As[ANum] != Answer)){
-			Result += As[ANum] + '<br />';
-		}
-	}
-	return Result;
-}
-
-function GetFirstCorrectAnswer(QNum){
-	var As = GetCorrectArray(QNum);
-	if (As.length > 0){
-		return As[0];
-	}
-	else{
-		return '';
-	}
-}
-
-function ReplaceGuessBox(QNum, Ans){
-	if (document.getElementById('Q_' + QNum + '_SA') != null){
-		var El = document.getElementById('Q_' + QNum + '_SA');
-		while (El.childNodes.length > 0){
-			El.removeChild(El.childNodes[0]);
-		}
-		var A = document.createElement('span');
-		A.setAttribute('class', 'Answer');
-		var T = document.createTextNode(Ans);
-		A.appendChild(T);
-		El.appendChild(A);
-	}
-}
-
-
-
-
-
-
-
-
-
-
-//CODE FOR HANDLING TIMER
-//Timer code
-var Seconds = 480;
-var Interval = null;
-
-function StartTimer(){
-	Interval = window.setInterval('DownTime()',1000);
-	document.getElementById('TimerText').style.display = 'inline';
-}
-
-function DownTime(){
-	var ss = Seconds % 60;
-	if (ss<10){
-		ss='0' + ss + '';
-	}
-
-	var mm = Math.floor(Seconds / 60);
-
-	if (document.getElementById('Timer') == null){
-		return;
-	}
-
-	document.getElementById('TimerText').innerHTML = mm + ':' + ss;
-	if (Seconds < 1){
-		window.clearInterval(Interval);
-		TimeOver = true;
-		TimesUp();
-	}
-	Seconds--;
-}
 
 
 
@@ -2096,15 +1366,11 @@ function DownTime(){
 <div class="NavButtonBar" id="TopNavBar">
 
 
-<button class="NavButton" onclick="history.back(); return false;">&lt;=</button>
-
 
 
 <button class="NavButton" onclick="location='index.htm'; return false;"> Index </button>
 
 
-
-<button class="NavButton" onclick="location='Control_y_robotica_test2.htm'; return false;">=&gt;</button>
 
 
 </div>
@@ -2114,16 +1380,16 @@ function DownTime(){
 <!-- EndTopNavButtons -->
 
 <div class="Titles">
-	<h2 class="ExerciseTitle">TEMA: CONTROL Y ROB&#x00D3;TICA refuerzo</h2>
+	<h2 class="ExerciseTitle"></h2>
 
+	<h3 class="ExerciseSubtitle">Quiz</h3>
 
-<div id="Timer"><span id="TimerText">&#160;&#160;</span></div>
 
 
 </div>
 
 <div id="InstructionsDiv" class="StdDiv">
-	<div id="Instructions">Pica en una sola respuesta de cada pregunta y luego pasa a la siguiente picando sobre los botones "OK" y "SIGUIENTE PREGUNTA", cuando hayas terminado las preguntas, espera a que el contador de minutos se ponga a 0:00 y pica sobre "SU TIEMPO HA TERMINADO" para conocer el n&#x00FA;mero de respuestas acertadas.</div>
+	<div id="Instructions"></div>
 </div>
 
 
@@ -2136,48 +1402,21 @@ function DownTime(){
 <div id="QNav" class="QuestionNavigation">
 
 <p style="text-align: right;">
-<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;"> </button>
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Show all questions</button>
 </p>
 
 <div id="OneByOneReadout">
-<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;"> </button>
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
 
 <span id="QNumReadout" class="QNum">&#160;</span>
 
-<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">SIGUIENTE PREGUNTA</button>
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
 <br />
 </div>
 
 </div>
  
 <ol class="QuizQuestions" id="Questions">
-<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">La palabra robot viene de la palabra checa robota, que significaba... </div><div class="ShortAnswer" id="Q_0_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_0_Guess" onfocus="TrackFocus('Q_0_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="10"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(0)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Un robot tiene que captar la ........................ de su entorno y en funci&#x00F3;n de los datos que recibe, realizar alguna acci&#x00F3;n como respuesta.</div><div class="ShortAnswer" id="Q_1_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_1_Guess" onfocus="TrackFocus('Q_1_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="11"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(1)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">Di cual de los siguientes ejemplo es un mecanismo en lugar de un robot.</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;M&#x00E1;quina colocadora de tapones de botellas</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;M&#x00E1;quina que suelda un coche</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;M&#x00E1;quina que pinta un coche</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;M&#x00E1;quina lavacoches</li></ol></li>
-<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">Se&#x00F1;ala la afirmaci&#x00F3;n falsa en relaci&#x00F3;n a los sistemas de control.</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La funci&#x00F3;n de los sistemas de control es detectar alguna condici&#x00F3;n del entorno.</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Los sistemas de control detectan: luz, temperatura, contacto, humedad,&#x2026;</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Los sistemas de control en funci&#x00F3;n de los valores que detecta, realiza alguna acci&#x00F3;n.</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El valor de la se&#x00F1;al de entrada en los sistemas de control es comparado con un valor prefijado, llamado punto de corte.</li></ol></li>
-<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">La se&#x00F1;al de entrada en los sistemas de control es la que se toma del exterior mediante un &#x2026;. </div><div class="ShortAnswer" id="Q_4_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_4_Guess" onfocus="TrackFocus('Q_4_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(4)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es un sensor utilizado en los sistemas de control?</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;LDR</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;JTC</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;BPW40:emisor y receptor de inflarrojos.</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Final de carrera.</li></ol></li>
-<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">La se&#x00F1;al de &#x2026;....................es el valor que se compara con la se&#x00F1;al de entrada en los sistemas de control.</div><div class="ShortAnswer" id="Q_6_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_6_Guess" onfocus="TrackFocus('Q_6_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="10"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(6)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">El elemento de los sistemas de control que compara la se&#x00F1;al de entrada con la se&#x00F1;al de referencia se llama .....................</div><div class="ShortAnswer" id="Q_7_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_7_Guess" onfocus="TrackFocus('Q_7_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="10"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(7)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">La se&#x00F1;al que emite en el sistema de control el elemento de control y que act&#x00FA;a sobre el elemento que realiza la acci&#x00F3;n de control (actuador) se llama se&#x00F1;al de .............</div><div class="ShortAnswer" id="Q_8_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_8_Guess" onfocus="TrackFocus('Q_8_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(8)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">En el sistema de control el elemento que corrige la variable controlada se llama ......................</div><div class="ShortAnswer" id="Q_9_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_9_Guess" onfocus="TrackFocus('Q_9_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(9)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">Los sistemas de control en los que no se eval&#x00FA;a el valor de la variable que se trata de controlar; es decir, no tienen realimentaci&#x00F3;n, se llaman de lazo&#x2026;........</div><div class="ShortAnswer" id="Q_10_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_10_Guess" onfocus="TrackFocus('Q_10_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(10)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">Los sistemas de control en los que se eval&#x00FA;a continuamente el valor de la variable controlada; es decir, estos sistemas tiene realimentaci&#x00F3;n, se llaman de lazo ..........</div><div class="ShortAnswer" id="Q_11_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_11_Guess" onfocus="TrackFocus('Q_11_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(11)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es un ejemplo de sistema de lazo abierto?</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La regulaci&#x00F3;n de la calefacci&#x00F3;n de una habitaci&#x00F3;n con un sistema de relojer&#x00ED;a.</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El llenado de un dep&#x00F3;sito con un grifo que abre durante un tiempo determinado.</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La programaci&#x00F3;n de un v&#x00ED;deo a las horas prefijadas.</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El control de temperatura de una habitaci&#x00F3;n con un termostato.</li></ol></li>
-<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es un ejemplo de sistema de control de lazo cerrado?</div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Control de llenado de un dep&#x00F3;sito con dos sensores de nivel, uno que detecta cu&#x00E1;ndo est&#x00E1; vac&#x00ED;o el dep&#x00F3;sito y otro que detecta cu&#x00E1;ndo est&#x00E1; lleno.</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Un autolavado de coches.</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El sistema de climatizaci&#x00F3;n de un coche.</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La programaci&#x00F3;n de riego de un jard&#x00ED;n de 8 a 9 de la ma&#x00F1;ana.</li></ol></li>
-<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es una se&#x00F1;al utilizada en los sistemas de control?</div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Se&#x00F1;al de salida</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Se&#x00F1;al de referencia</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Se&#x00F1;al de entrada</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Se&#x00F1;al de toma</li></ol></li>
-<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es un elemento de un sistema de control?</div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Comparador.</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Elemento de control</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Realimentaci&#x00F3;n</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Activador</li></ol></li>
-<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">Se&#x00F1;ala la afirmaci&#x00F3;n falsa en relaci&#x00F3;n a los robots.</div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Se utilizan en procesos en los que la intervenci&#x00F3;n humana es tremendamente arriesgada.</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Se utilizan en procesos en los que se requiere una precisi&#x00F3;n extrema.</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Realizan las tareas en lugar de las personas.</li><li id="Q_16_3"><button class="FuncButton" id="Q_16_3_Btn" onclick="CheckMCAnswer(16,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El uso de robots controlados mediante sofisticados programas de software ha sido esencial en la antigua industria.</li></ol></li>
-<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es una parte del sistema mec&#x00E1;nico de un robot?</div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Piezas r&#x00ED;gidas.</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Articulaciones.</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Actuadores.</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Activadores.</li></ol></li>
-<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">En los robots los elementos que sirven de uni&#x00F3;n entre dos piezas r&#x00ED;gidas se denominan .............................</div><div class="ShortAnswer" id="Q_18_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_18_Guess" onfocus="TrackFocus('Q_18_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="14"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(18)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">En los robots los elementos que transmiten el movimiento a las articulaciones se llaman&#x2026; </div><div class="ShortAnswer" id="Q_19_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_19_Guess" onfocus="TrackFocus('Q_19_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="10"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(19)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es de las maneras para producir el movimiento de un robot?</div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Sistemas neum&#x00E1;ticos</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Sistemas el&#x00E9;ctricos</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Sistemas hidr&#x00E1;ulicos</li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Sistemas mec&#x00E1;nicos</li></ol></li>
-<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">La parte del robot encargada finalmente de realizar el trabajo se llama &#x2026;...................</div><div class="ShortAnswer" id="Q_21_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_21_Guess" onfocus="TrackFocus('Q_21_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="11"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(21)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l de las siguientes para el ejemplo de una cadena de montaje de autom&#x00F3;viles no es una herramienta de un robot?</div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Un destornillador</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Un soldador</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Una pistola con pintura</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Las ruedas de una cinta transportadora</li></ol></li>
-<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es una fase del dise&#x00F1;o y construcci&#x00F3;n de robots no programables?</div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La electr&#x00F3;nica</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La mec&#x00E1;nica</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El propio funcionamiento</li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La fuente de energ&#x00ED;a</li></ol></li>
-<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l no es una de las tres grandes partes de la electr&#x00F3;nica de un robot?</div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La alimentaci&#x00F3;n del circuito.</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El par Darlington.</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Los sensores.</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El actuador</li></ol></li>
-<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText">Como el funcionamiento de los motores produce inestabilidad (cambios en la tensi&#x00F3;n) en los circuitos electr&#x00F3;nicos de un robots, se suelen conectar en los terminales del motor un &#x2026;...................</div><div class="ShortAnswer" id="Q_25_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_25_Guess" onfocus="TrackFocus('Q_25_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="11"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(25)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">En la electr&#x00F3;nica de un robot, el par Darlington permite &#x2026;............&#x2026;. la sensibilidad de los sensores.</div><div class="ShortAnswer" id="Q_26_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_26_Guess" onfocus="TrackFocus('Q_26_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(26)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li></ol>
 
 
 
@@ -2196,15 +1435,11 @@ function DownTime(){
 <div class="NavButtonBar" id="BottomNavBar">
 
 
-<button class="NavButton" onclick="history.back(); return false;">&lt;=</button>
-
 
 
 <button class="NavButton" onclick="location='index.htm'; return false;"> Index </button>
 
 
-
-<button class="NavButton" onclick="location='Control_y_robotica_test2.htm'; return false;">=&gt;</button>
 
 
 </div>

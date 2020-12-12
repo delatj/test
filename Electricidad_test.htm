@@ -33,23 +33,23 @@ TEMA: ELECTRICIDAD Y CIRCUITO EL&#x00C9;CTRICO TEST
 
 /* CSS variables for colours. */
 :root{
-	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontFace:       arial,helvetica,sans-serif;
 	--strFontSize:       small;
 	--strTextColor:      #000000;
-	--strTitleColor:     #ffffff;
+	--strTitleColor:     #000000;
 
-	--strFuncLightColor: #ffffff;
-	--strFuncShadeColor: #7f7f7f;
-	--strLinkColor:      #0000FF;
-	--strVLinkColor:     #0000CC;
+	--strFuncLightColor: #eeeeee;
+	--strFuncShadeColor: #6e6e6e;
+	--strLinkColor:      #0000ff;
+	--strVLinkColor:     #ff00ff;
 	
-	--strNavBarColor:    #000000;
-	--strNavLightColor:  #7f7f7f;
-	--strNavShadeColor:  #000000;
-	--strNavTextColor:   #ffffff;
+	--strNavBarColor:    #c0c0c0;
+	--strNavLightColor:  #dfdfdf;
+	--strNavShadeColor:  #606060;
+	--strNavTextColor:   #000000;
 	
-	--strPageBGColor:    #408080;
-	--strExBGColor:      #ffffff;
+	--strPageBGColor:    #c0c0c0;
+	--strExBGColor:      #dddddd;
 }
 
 body{
@@ -2084,7 +2084,7 @@ function ReplaceGuessBox(QNum, Ans){
 
 //CODE FOR HANDLING TIMER
 //Timer code
-var Seconds = 480;
+var Seconds = 330;
 var Interval = null;
 
 function StartTimer(){
@@ -2130,6 +2130,23 @@ function DownTime(){
 <body onload="StartUp()" id="TheBody" >
 
 <!-- BeginTopNavButtons -->
+
+
+<div class="NavButtonBar" id="TopNavBar">
+
+
+<button class="NavButton" onclick="history.back(); return false;">&lt;=</button>
+
+
+
+<button class="NavButton" onclick="location='index.htm'; return false;"> Index </button>
+
+
+
+<button class="NavButton" onclick="location='Electronica_quien.htm'; return false;">=&gt;</button>
+
+
+</div>
 
 
 
@@ -2223,6 +2240,23 @@ function DownTime(){
 </div>
 
 <!-- BeginBottomNavButtons -->
+
+
+<div class="NavButtonBar" id="BottomNavBar">
+
+
+<button class="NavButton" onclick="history.back(); return false;">&lt;=</button>
+
+
+
+<button class="NavButton" onclick="location='index.htm'; return false;"> Index </button>
+
+
+
+<button class="NavButton" onclick="location='Electronica_quien.htm'; return false;">=&gt;</button>
+
+
+</div>
 
 
 
