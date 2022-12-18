@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
-<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to casa."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Instituto."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
+<meta name="dc:creator" content="Instituto" />
 <meta name="dc:creator" content="casa" />
 <meta name="dc:creator" content="CAS" />
 <meta name="dc:creator" content="PP" />
@@ -34,23 +35,23 @@ TEMA: TECNOLOG&#x00CD;AS DE LA COMUNICACI&#x00D3;N. INTERNET TEST
 
 /* CSS variables for colours. */
 :root{
-	--strFontFace:       arial,helvetica,sans-serif;
+	--strFontFace:       Geneva,Arial,sans-serif;
 	--strFontSize:       small;
 	--strTextColor:      #000000;
-	--strTitleColor:     #000000;
+	--strTitleColor:     #ffffff;
 
-	--strFuncLightColor: #eeeeee;
-	--strFuncShadeColor: #6e6e6e;
-	--strLinkColor:      #0000ff;
-	--strVLinkColor:     #ff00ff;
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
 	
-	--strNavBarColor:    #c0c0c0;
-	--strNavLightColor:  #dfdfdf;
-	--strNavShadeColor:  #606060;
-	--strNavTextColor:   #000000;
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
 	
-	--strPageBGColor:    #c0c0c0;
-	--strExBGColor:      #dddddd;
+	--strPageBGColor:    #408080;
+	--strExBGColor:      #ffffff;
 }
 
 body{
@@ -971,7 +972,7 @@ var ShuffleQs = true;
 var ShuffleAs = true;
 var DefaultRight = 'Pica en la siguiente pregunta';
 var DefaultWrong = 'Pica en la siguiente pregunta';
-var QsToShow = 30;
+var QsToShow = 34;
 var Score = 0;
 var Finished = false;
 var Qs = null;
@@ -1310,6 +1311,32 @@ I[29][1]='';
 I[29][2]='1';
 I[29][3]=new Array();
 I[29][3][0]=new Array('im\u00E1genes.','',1,100,1);
+I[30]=new Array();I[30][0]=100;
+I[30][1]='';
+I[30][2]='1';
+I[30][3]=new Array();
+I[30][3][0]=new Array('cosas','',1,100,1);
+I[31]=new Array();I[31][0]=100;
+I[31][1]='';
+I[31][2]='0';
+I[31][3]=new Array();
+I[31][3][0]=new Array('Luces que se encienden con el m\u00F3vil.','',0,0,1);
+I[31][3][1]=new Array('Reloj inteligente','',0,0,1);
+I[31][3][2]=new Array('C\u00E1maras de vigilancia IP o wifi.','',0,0,1);
+I[31][3][3]=new Array('Secador de pelo.','',1,100,1);
+I[32]=new Array();I[32][0]=100;
+I[32][1]='';
+I[32][2]='1';
+I[32][3]=new Array();
+I[32][3][0]=new Array('dispositivo','',1,100,1);
+I[33]=new Array();I[33][0]=100;
+I[33][1]='';
+I[33][2]='0';
+I[33][3]=new Array();
+I[33][3][0]=new Array('OpenRemote','',1,100,1);
+I[33][3][1]=new Array('Youtube','',0,0,1);
+I[33][3][2]=new Array('Instagram','',0,0,1);
+I[33][3][3]=new Array('Facebook','',0,0,1);
 
 
 function StartUp(){
@@ -2071,23 +2098,6 @@ function DownTime(){
 <!-- BeginTopNavButtons -->
 
 
-<div class="NavButtonBar" id="TopNavBar">
-
-
-<button class="NavButton" onclick="history.back(); return false;">&lt;=</button>
-
-
-
-<button class="NavButton" onclick="location='index.htm'; return false;"> Index </button>
-
-
-
-<button class="NavButton" onclick="location='madera_quien1.htm'; return false;">=&gt;</button>
-
-
-</div>
-
-
 
 <!-- EndTopNavButtons -->
 
@@ -2158,7 +2168,11 @@ function DownTime(){
 <li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">Para descargar una imagen de Internet picamos sobre ella con el bot&#x00F3;n derecho del rat&#x00F3;n y luego de las pesta&#x00F1;as que aparecen pinchamos con el bot&#x00F3;n izquierdo sobre &#x201C;Guardar imagen ..........&#x201D;</div><div class="ShortAnswer" id="Q_26_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_26_Guess" onfocus="TrackFocus('Q_26_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(26)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
 <li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText">Las p&#x00E1;ginas de Internet especializadas en la b&#x00FA;squeda de otras p&#x00E1;ginas se llaman &#x2026; </div><div class="ShortAnswer" id="Q_27_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_27_Guess" onfocus="TrackFocus('Q_27_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="10"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(27)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
 <li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;les de las siguientes es una de las pesta&#x00F1;as que orientan la b&#x00FA;squeda de forma muy intuitiva en el buscador Google?</div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Gmail.</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Hotmail.</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Whatsapp.</li><li id="Q_28_3"><button class="FuncButton" id="Q_28_3_Btn" onclick="CheckMCAnswer(28,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Deportes.</li></ol></li>
-<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText">Para buscar una imagen en Google tras escribir la palabra de b&#x00FA;squeda picamos en la pesta&#x00F1;a..................</div><div class="ShortAnswer" id="Q_29_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_29_Guess" onfocus="TrackFocus('Q_29_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(29)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li></ol>
+<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText">Para buscar una imagen en Google tras escribir la palabra de b&#x00FA;squeda picamos en la pesta&#x00F1;a..................</div><div class="ShortAnswer" id="Q_29_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_29_Guess" onfocus="TrackFocus('Q_29_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(29)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_30" style="display: none;"><div class="QuestionText">El Internet que descibre la conexi&#x00F3;n de dispositivos inteligentes que se conectan a Internet para transmitir informaci&#x00F3;n y funcionar, es el Internet de las ............... o IoT.</div><div class="ShortAnswer" id="Q_30_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_30_Guess" onfocus="TrackFocus('Q_30_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(30)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_31" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l de los siguientes dispisitivos puede no pertenecer al Internet de las cosas?</div><ol class="MCAnswers"><li id="Q_31_0"><button class="FuncButton" id="Q_31_0_Btn" onclick="CheckMCAnswer(31,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Luces que se encienden con el m&#x00F3;vil.</li><li id="Q_31_1"><button class="FuncButton" id="Q_31_1_Btn" onclick="CheckMCAnswer(31,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Reloj inteligente</li><li id="Q_31_2"><button class="FuncButton" id="Q_31_2_Btn" onclick="CheckMCAnswer(31,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;C&#x00E1;maras de vigilancia IP o wifi.</li><li id="Q_31_3"><button class="FuncButton" id="Q_31_3_Btn" onclick="CheckMCAnswer(31,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Secador de pelo.</li></ol></li>
+<li class="QuizQuestion" id="Q_32" style="display: none;"><div class="QuestionText">Una plataforma IoT logra conectar de forma eficaz los diferentes software necesarios para hacer llegar Internet a un determinado .......</div><div class="ShortAnswer" id="Q_32_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_32_Guess" onfocus="TrackFocus('Q_32_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="11"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(32)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_33" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l es un plataforma IoT?</div><ol class="MCAnswers"><li id="Q_33_0"><button class="FuncButton" id="Q_33_0_Btn" onclick="CheckMCAnswer(33,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;OpenRemote</li><li id="Q_33_1"><button class="FuncButton" id="Q_33_1_Btn" onclick="CheckMCAnswer(33,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Youtube</li><li id="Q_33_2"><button class="FuncButton" id="Q_33_2_Btn" onclick="CheckMCAnswer(33,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Instagram</li><li id="Q_33_3"><button class="FuncButton" id="Q_33_3_Btn" onclick="CheckMCAnswer(33,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Facebook</li></ol></li></ol>
 
 
 
@@ -2172,23 +2186,6 @@ function DownTime(){
 </div>
 
 <!-- BeginBottomNavButtons -->
-
-
-<div class="NavButtonBar" id="BottomNavBar">
-
-
-<button class="NavButton" onclick="history.back(); return false;">&lt;=</button>
-
-
-
-<button class="NavButton" onclick="location='index.htm'; return false;"> Index </button>
-
-
-
-<button class="NavButton" onclick="location='madera_quien1.htm'; return false;">=&gt;</button>
-
-
-</div>
 
 
 
