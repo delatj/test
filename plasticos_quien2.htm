@@ -1497,17 +1497,12 @@ function CheckAnswers(){
 	if (Score < 0){Score = 0;}
 
 	if (AllDone == true){
-		Feedback = YourScoreIs + ' ' + Score + '%.<br/>' + CorrectResponse;
-	}
-	else {
-		if (TimeOver == true){
-			Feedback = YourScoreIs + ' ' + Score + '%.'
-		}
-		else{
-			Feedback = YourScoreIs + ' ' + Score + '%.' + '<br />' + IncorrectResponse;
-		}
-	}
-	ShowMessage(Feedback);
+                            Feedback = '<span style="font-size: 325px; font-weight: bold; color: red;">' + ' ' + Score + '%.</span>';
+                        }
+                        else {
+                            Feedback = '<span style="font-size: 325px; font-weight: bold; color: red;">'  + ' ' + Score + '%.</span>';
+                        }
+                        ShowMessage(Feedback);
 	
 //If the exercise is over, deal with that
 	if ((AllDone == true)||(TimeOver == true)){
