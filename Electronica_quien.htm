@@ -48,7 +48,7 @@ TEMA: ELECTR&#x00D3;NICA QUI&#x00C9;N 1
 	--strNavShadeColor:  #606060;
 	--strNavTextColor:   #000000;
 	
-	--strPageBGColor:    #c0c0c0;
+	--strPageBGColor:    #80ffff;
 	--strExBGColor:      #dddddd;
 }
 
@@ -1495,13 +1495,7 @@ function CheckAnswers(){
 	Score = DragEx.Score;
 	if (Score < 0){Score = 0;}
 
-	if (AllDone == true){
-                            Feedback = '<span style="font-size: 325px; font-weight: bold; color: red;">' + ' ' + Score + '%.</span>';
-                        }
-                        else {
-                            Feedback = '<span style="font-size: 325px; font-weight: bold; color: red;">'  + ' ' + Score + '%.</span>';
-                        }
-                        ShowMessage(Feedback);
+	if (AllDone == true){ var bgColor = "lightgrey"; if (Score >= 0 && Score <= 20) { bgColor = "lightblue"; } else if (Score > 20 && Score <= 40) { bgColor = "lightgreen"; } else if (Score > 40 && Score <= 60) { bgColor = "yellow"; } else if (Score > 60 && Score <= 80) { bgColor = "orange"; } else if (Score > 80 && Score <= 100) { bgColor = "red"; } document.body.style.backgroundColor = bgColor; Feedback = '<span style="font-size: 325px; font-weight: bold; color: red;">' + ' ' + Score + '%.</span>'; } else { var bgColor = "lightgrey"; if (Score >= 0 && Score <= 20) { bgColor = "lightblue"; } else if (Score > 20 && Score <= 40) { bgColor = "lightgreen"; } else if (Score > 40 && Score <= 60) { bgColor = "yellow"; } else if (Score > 60 && Score <= 80) { bgColor = "orange"; } else if (Score > 80 && Score <= 100) { bgColor = "red"; } document.body.style.backgroundColor = bgColor; Feedback = '<span style="font-size: 325px; font-weight: bold; color: red;">' + ' ' + Score + '%.</span>'; } ShowMessage(Feedback);
 	
 //If the exercise is over, deal with that
 	if ((AllDone == true)||(TimeOver == true)){
@@ -1583,7 +1577,7 @@ function DownTime(){
 
 </head> 
 
-<body onload="TimerStartUp()" id="TheBody" > 
+<body style="background-color: lightgrey;" onload="TimerStartUp()" id="TheBody" > 
 <!-- BeginTopNavButtons -->
 
 

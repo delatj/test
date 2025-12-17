@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
-<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Instituto."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Ies Arboleda."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
+<meta name="dc:creator" content="Ies Arboleda" />
 <meta name="dc:creator" content="Instituto" />
 <meta name="dc:creator" content="casa" />
 <meta name="dc:creator" content="CAS" />
@@ -1232,7 +1233,7 @@ I[14]=new Array();I[14][0]=100;
 I[14][1]='';
 I[14][2]='1';
 I[14][3]=new Array();
-I[14][3][0]=new Array('f\u00EDsico.','',1,100,1);
+I[14][3][0]=new Array('f\u00EDsico','',1,100,1);
 I[15]=new Array();I[15][0]=100;
 I[15][1]='';
 I[15][2]='1';
@@ -1310,7 +1311,7 @@ I[29]=new Array();I[29][0]=100;
 I[29][1]='';
 I[29][2]='1';
 I[29][3]=new Array();
-I[29][3][0]=new Array('im\u00E1genes.','',1,100,1);
+I[29][3][0]=new Array('im\u00E1genes','',1,100,1);
 I[30]=new Array();I[30][0]=100;
 I[30][1]='';
 I[30][2]='1';
@@ -1648,7 +1649,17 @@ function CheckFinished(){
 	
 //Report final score and submit if necessary
 		CalculateOverallScore();
-		FB = '<span style="font-size: 325px; font-weight: bold; color: red;">' + YourScoreIs + ' ' + Score + '%.</span>';
+		
+                var bgColor = "lightgrey";
+                if (Score >= 0 && Score <= 20) { bgColor = "lightblue"; }
+                else if (Score > 20 && Score <= 40) { bgColor = "lightgreen"; }
+                else if (Score > 40 && Score <= 60) { bgColor = "yellow"; }
+                else if (Score > 60 && Score <= 80) { bgColor = "orange"; }
+                else if (Score > 80 && Score <= 100) { bgColor = "red"; }
+                document.body.style.backgroundColor = bgColor;
+
+                FB = '<span style="font-size: 325px; font-weight: bold; color: red;">' + YourScoreIs + ' ' + Score + '%.</span>';
+            
 		if (ShowCorrectFirstTime == true){
 			var CFT = 0;
 			for (QNum=0; QNum<State.length; QNum++){
@@ -2093,7 +2104,7 @@ function DownTime(){
 
 </head>
 
-<body onload="StartUp()" id="TheBody" >
+<body style="background-color: lightgrey;" onload="StartUp()" id="TheBody" >
 
 <!-- BeginTopNavButtons -->
 

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
-<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to casa."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Ies Arboleda."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
+<meta name="dc:creator" content="Ies Arboleda" />
 <meta name="dc:creator" content="casa" />
 <meta name="dc:creator" content="CAS" />
-<meta name="dc:title" content="TEMA: PROYECTO T&#x00C9;CNICO TEST" />
+<meta name="dc:creator" content="usuario" />
+<meta name="dc:creator" content="cas" />
+<meta name="dc:title" content="TEMA: CIBERSEGURIDAD" />
 
 
 
 <title>
-TEMA: PROYECTO T&#x00C9;CNICO TEST
+TEMA: CIBERSEGURIDAD
 </title>
 
 <!-- Made with executable version 7.0 Release 1 Build 0 -->
@@ -33,23 +36,23 @@ TEMA: PROYECTO T&#x00C9;CNICO TEST
 
 /* CSS variables for colours. */
 :root{
-	--strFontFace:       arial,helvetica,sans-serif;
+	--strFontFace:       Geneva,Arial,sans-serif;
 	--strFontSize:       small;
 	--strTextColor:      #000000;
-	--strTitleColor:     #000000;
+	--strTitleColor:     #ffffff;
 
-	--strFuncLightColor: #eeeeee;
-	--strFuncShadeColor: #6e6e6e;
-	--strLinkColor:      #0000ff;
-	--strVLinkColor:     #ff00ff;
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
 	
-	--strNavBarColor:    #c0c0c0;
-	--strNavLightColor:  #dfdfdf;
-	--strNavShadeColor:  #606060;
-	--strNavTextColor:   #000000;
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
 	
-	--strPageBGColor:    #80ffff;
-	--strExBGColor:      #dddddd;
+	--strPageBGColor:    #408080;
+	--strExBGColor:      #ffffff;
 }
 
 body{
@@ -954,13 +957,13 @@ function ClearTextBoxes(){
 //JQUIZ CORE JAVASCRIPT CODE
 
 var CurrQNum = 0;
-var CorrectIndicator = '';
-var IncorrectIndicator = '';
+var CorrectIndicator = ' ';
+var IncorrectIndicator = ' ';
 var YourScoreIs = ':';
 
 //New for 6.2.2.0
 var CompletedSoFar = 'Questions completed so far: ';
-var ExerciseCompleted = 'You have completed the exercise.';
+var ExerciseCompleted = 'Tus has completado el ejercicio.';
 var ShowCompletedSoFar = true;
 
 var ContinuousScoring = false;
@@ -970,13 +973,13 @@ var ShuffleQs = true;
 var ShuffleAs = true;
 var DefaultRight = 'Pica en la siguiente pregunta';
 var DefaultWrong = 'Pica en la siguiente pregunta';
-var QsToShow = 18;
+var QsToShow = 11;
 var Score = 0;
 var Finished = false;
 var Qs = null;
 var QArray = new Array();
 var ShowingAllQuestions = false;
-var ShowAllQuestionsCaption = '';
+var ShowAllQuestionsCaption = ' ';
 var ShowOneByOneCaption = 'Responde la preguntas de una en una';
 var State = new Array();
 var Feedback = '';
@@ -1155,142 +1158,59 @@ function SetQNumReadout(){
 var I=new Array();
 I[0]=new Array();I[0][0]=100;
 I[0][1]='';
-I[0][2]='0';
+I[0][2]='1';
 I[0][3]=new Array();
-I[0][3][0]=new Array('El presupuesto','',0,0,1);
-I[0][3][1]=new Array('Los planos','',0,0,1);
-I[0][3][2]=new Array('El Pliego de Condiciones','',0,0,1);
-I[0][3][3]=new Array('La memoria y sus anexos','',1,100,1);
+I[0][3][0]=new Array('min\u00FAsculas','',1,100,1);
 I[1]=new Array();I[1][0]=100;
 I[1][1]='';
-I[1][2]='0';
+I[1][2]='1';
 I[1][3]=new Array();
-I[1][3][0]=new Array('Dibujos','',0,0,1);
-I[1][3][1]=new Array('Mapas','',0,0,1);
-I[1][3][2]=new Array('Textos','',1,100,1);
-I[1][3][3]=new Array('Bocetos','',0,0,1);
+I[1][3][0]=new Array('oficiales','',1,100,1);
 I[2]=new Array();I[2][0]=100;
 I[2][1]='';
-I[2][2]='0';
+I[2][2]='1';
 I[2][3]=new Array();
-I[2][3][0]=new Array('Construcci\u00F3n','',0,0,1);
-I[2][3][1]=new Array('Comprobaci\u00F3n','',1,100,1);
-I[2][3][2]=new Array('Memoria','',0,0,1);
-I[2][3][3]=new Array('Dise\u00F1o','',0,0,1);
+I[2][3][0]=new Array('deseados','',1,100,1);
 I[3]=new Array();I[3][0]=100;
 I[3][1]='';
-I[3][2]='0';
+I[3][2]='1';
 I[3][3]=new Array();
-I[3][3][0]=new Array('La memoria y sus anexos','',0,0,1);
-I[3][3][1]=new Array('Los  planos','',1,100,1);
-I[3][3][2]=new Array('El pliego de condiciones','',0,0,1);
-I[3][3][3]=new Array('El  presupuesto','',0,0,1);
+I[3][3][0]=new Array('antivirus','',1,100,1);
 I[4]=new Array();I[4][0]=100;
 I[4][1]='';
-I[4][2]='0';
+I[4][2]='1';
 I[4][3]=new Array();
-I[4][3][0]=new Array('Investigar','',0,0,1);
-I[4][3][1]=new Array('Interpretar','',0,0,1);
-I[4][3][2]=new Array('Proyectar','',0,0,1);
-I[4][3][3]=new Array('Analizar','',1,100,1);
+I[4][3][0]=new Array('actualizado','',1,100,1);
 I[5]=new Array();I[5][0]=100;
 I[5][1]='';
-I[5][2]='0';
+I[5][2]='1';
 I[5][3]=new Array();
-I[5][3][0]=new Array('Crear las fases del proyecto','',0,0,1);
-I[5][3][1]=new Array('Dise\u00F1ar','',0,0,1);
-I[5][3][2]=new Array('Elaborar un tabla de herramientas y materiales','',1,100,1);
-I[5][3][3]=new Array('planificar','',0,0,1);
+I[5][3][0]=new Array('datos','',1,100,1);
 I[6]=new Array();I[6][0]=100;
 I[6][1]='';
-I[6][2]='0';
+I[6][2]='1';
 I[6][3]=new Array();
-I[6][3][0]=new Array('La planificaci\u00F3n.','',0,0,1);
-I[6][3][1]=new Array('La tabla de herramientas y materiales.','',0,0,1);
-I[6][3][2]=new Array('El Dise\u00F1o, en el que elaboramos los planos.','',1,100,1);
-I[6][3][3]=new Array('La construcci\u00F3n.','',0,0,1);
+I[6][3][0]=new Array('sesi\u00F3n','',1,100,1);
 I[7]=new Array();I[7][0]=100;
 I[7][1]='';
-I[7][2]='0';
+I[7][2]='1';
 I[7][3]=new Array();
-I[7][3][0]=new Array('La planificaci\u00F3n, por ejemplo haciendo una hoja de proceso.','',1,100,1);
-I[7][3][1]=new Array('La tabla de herramientas y materiales.','',0,0,1);
-I[7][3][2]=new Array('El Dise\u00F1o, en el que elaboramos los planos.','',0,0,1);
-I[7][3][3]=new Array('La construcci\u00F3n.','',0,0,1);
+I[7][3][0]=new Array('pendrives','',1,100,1);
 I[8]=new Array();I[8][0]=100;
 I[8][1]='';
-I[8][2]='0';
+I[8][2]='1';
 I[8][3]=new Array();
-I[8][3][0]=new Array('La construcci\u00F3n','',0,0,1);
-I[8][3][1]=new Array('La planificaci\u00F3n','',0,0,1);
-I[8][3][2]=new Array('La creaci\u00F3n de la tabla de herramientas y materiales','',0,0,1);
-I[8][3][3]=new Array('El dise\u00F1o','',1,100,1);
+I[8][3][0]=new Array('spam','',1,100,1);
 I[9]=new Array();I[9][0]=100;
 I[9][1]='';
-I[9][2]='0';
+I[9][2]='1';
 I[9][3]=new Array();
-I[9][3][0]=new Array('Operaciones ordenadas, materiales, Herramientas y m\u00E1quinas, instrumentos de medici\u00F3n y control y tiempo de ejecuci\u00F3n.','',1,100,1);
-I[9][3][1]=new Array('La planificaci\u00F3n,construcci\u00F3n y comprobaci\u00F3n.','',0,0,1);
-I[9][3][2]=new Array('La creaci\u00F3n de la tabla de herramientas y materiales','',0,0,1);
-I[9][3][3]=new Array('El dise\u00F1o,construcci\u00F3n y comprobaci\u00F3n.','',0,0,1);
+I[9][3][0]=new Array('deseados','',1,100,1);
 I[10]=new Array();I[10][0]=100;
 I[10][1]='';
-I[10][2]='0';
+I[10][2]='1';
 I[10][3]=new Array();
-I[10][3][0]=new Array('La construcci\u00F3n','',1,100,1);
-I[10][3][1]=new Array('El montaje','',0,0,1);
-I[10][3][2]=new Array('La verificaci\u00F3n','',0,0,1);
-I[10][3][3]=new Array('Preparaci\u00F3n del prototipo','',0,0,1);
-I[11]=new Array();I[11][0]=100;
-I[11][1]='';
-I[11][2]='0';
-I[11][3]=new Array();
-I[11][3][0]=new Array('\u00BFC\u00F3mo esta hecho o fabricado?, \u00BFpara qu\u00E9 sirve? y \u00BFc\u00F3mo funciona?.','',1,100,1);
-I[11][3][1]=new Array('\u00BFPara qu\u00E9 sirve? y \u00BFQui\u00E9n lo creo?','',0,0,1);
-I[11][3][2]=new Array('\u00BFA qui\u00E9n pertenece?\u00BFc\u00F3mo se construye? y \u00BFcu\u00E1nto puede durar?','',0,0,1);
-I[11][3][3]=new Array('\u00BFC\u00F3mo funciona?, \u00BFcu\u00E1nto puede durar? y \u00BFcu\u00E1nto vale?.','',0,0,1);
-I[12]=new Array();I[12][0]=100;
-I[12][1]='';
-I[12][2]='0';
-I[12][3]=new Array();
-I[12][3][0]=new Array('Planificaci\u00F3n','',1,100,1);
-I[12][3][1]=new Array('Dise\u00F1o','',0,0,1);
-I[12][3][2]=new Array('Planos','',0,0,1);
-I[12][3][3]=new Array('Montaje','',0,0,1);
-I[13]=new Array();I[13][0]=100;
-I[13][1]='';
-I[13][2]='0';
-I[13][3]=new Array();
-I[13][3][0]=new Array('El pliego de condiciones','',0,0,1);
-I[13][3][1]=new Array('La memoria','',0,0,1);
-I[13][3][2]=new Array('El presupuesto','',1,100,1);
-I[13][3][3]=new Array('Los planos','',0,0,1);
-I[14]=new Array();I[14][0]=100;
-I[14][1]='';
-I[14][2]='0';
-I[14][3]=new Array();
-I[14][3][0]=new Array('Metodolog\u00EDa del Proyecto T\u00E9cnico','',0,0,1);
-I[14][3][1]=new Array('Metodolog\u00EDa de Dise\u00F1o Proyecto Construcci\u00F3n','',1,100,1);
-I[14][3][2]=new Array('Metodolog\u00EDa Constructiva','',0,0,1);
-I[14][3][3]=new Array('Metodolog\u00EDa Constructivista','',0,0,1);
-I[15]=new Array();I[15][0]=100;
-I[15][1]='';
-I[15][2]='0';
-I[15][3]=new Array();
-I[15][3][0]=new Array('Comprobaci\u00F3n','',0,0,1);
-I[15][3][1]=new Array('Construcci\u00F3n','',0,0,1);
-I[15][3][2]=new Array('Memoria','',0,0,1);
-I[15][3][3]=new Array('La identificaci\u00F3n del problema y la b\u00FAsqueda de la mejor soluci\u00F3n','',1,100,1);
-I[16]=new Array();I[16][0]=100;
-I[16][1]='';
-I[16][2]='1';
-I[16][3]=new Array();
-I[16][3][0]=new Array('presupuesto','',1,100,1);
-I[17]=new Array();I[17][0]=100;
-I[17][1]='';
-I[17][2]='1';
-I[17][3]=new Array();
-I[17][3][0]=new Array('comprobaci\u00F3n','',1,100,1);
+I[10][3][0]=new Array('candado','',1,100,1);
 
 
 function StartUp(){
@@ -1377,168 +1297,6 @@ function CreateStatusArray(){
 		else{
 			State[QNum] = null;
 		}
-	}
-}
-
-
-
-function CheckMCAnswer(QNum, ANum, Btn){
-//if question doesn't exist, bail
-	if (State[QNum].length < 1){return;}
-	
-//Get the feedback
-	Feedback = I[QNum][3][ANum][1];
-	
-//Now show feedback and bail if question already complete
-	if (State[QNum][0] > -1){
-//Add an extra message explaining that the question
-// is finished if defined by the user
-		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
-//Show the feedback
-		ShowMessage(Feedback);
-//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
-//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
-		return;
-	}
-	
-//Hide the button while processing
-	Btn.style.display = 'none';
-
-//Increment the number of tries
-	State[QNum][2]++;
-	
-//Add the percent-correct value of this answer
-	State[QNum][3] += I[QNum][3][ANum][3];
-	
-//Store the try number in the answer part of the State array, for tracking purposes
-	State[QNum][1][ANum] = State[QNum][2];
-	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
-	State[QNum][5] += String.fromCharCode(65+ANum);
-	
-//Should this answer be accepted as correct?
-	if (I[QNum][3][ANum][2] < 1){
-//It's wrong
-
-//Mark the answer
-		Btn.innerHTML = IncorrectIndicator;
-		
-//Remove any previous score unless exercise is finished (6.0.3.8+)
-		if (Finished == false){
-			WriteToInstructions(strInstructions);
-		}	
-		
-//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
-		var RemainingAnswer = FinalAnswer(QNum);
-		if (RemainingAnswer > -1){
-//Behave as if the last answer had been selected, but give no credit for it
-//Increment the number of tries
-			State[QNum][2]++;		
-		
-//Calculate the score for this question
-			CalculateMCQuestionScore(QNum);
-			
-//Get the overall score and add it to the feedback
-			CalculateOverallScore();
-//New for 6.2.2.1
-			var QsDone = CheckQuestionsCompleted();
-			if ((ContinuousScoring == true)||(Finished == true)){
-				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
-				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
-			}
-			else{
-				WriteToInstructions(QsDone);
-			}
-		}
-	}
-	else{
-//It's right
-//Mark the answer
-		Btn.innerHTML = CorrectIndicator;
-				
-//Calculate the score for this question
-		CalculateMCQuestionScore(QNum);
-		
-//New for 6.2.2.0
-		var QsDone = CheckQuestionsCompleted();
-
-//Get the overall score and add it to the feedback
-		if (ContinuousScoring == true){
-			CalculateOverallScore();
-			if ((ContinuousScoring == true)||(Finished == true)){
-				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
-				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
-			}
-		}
-		else{
-			WriteToInstructions(QsDone);
-		}
-	}
-	
-//Show the button again
-	Btn.style.display = 'inline';
-	
-//Finally, show the feedback	
-	ShowMessage(Feedback);
-	
-//Check whether all questions are now done
-	CheckFinished();
-}
-
-function CalculateMCQuestionScore(QNum){
-	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
-	var PercentCorrect = State[QNum][3];
-	var TotAns = GetTotalMCAnswers(QNum);
-	var HintPenalties = State[QNum][4];
-	
-//Make sure it's not already complete
-
-	if (State[QNum][0] < 0){
-//Allow for Hybrids
-		if (HintPenalties >= 1){
-			State[QNum][0] = 0;
-		}
-		else{
-//This line calculates the score for this question
-			if (TotAns == 1){
-				State[QNum][0] = 1;
-			}
-			else{
-				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
-			}
-		}
-//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
-		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
-			State[QNum][0] = 0;
-		}
-	}
-}
-
-function GetTotalMCAnswers(QNum){
-	var Result = 0;
-	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
-		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
-			Result++;
-		}
-	}
-	return Result;
-}
-
-function FinalAnswer(QNum){
-	var UnchosenAnswers = 0;
-	var FinalAnswer = -1;
-	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
-		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
-			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
-				UnchosenAnswers++;
-				FinalAnswer = ANum;
-			}
-		}
-	}
-	if (UnchosenAnswers == 1){
-		return FinalAnswer;
-	}
-	else{
-		return -1;
 	}
 }
 
@@ -1682,11 +1440,11 @@ function TimesUp(){
 
 var CaseSensitive = false;
 var ShowAlsoCorrect = false;
-var PleaseEnter = 'Please enter a guess.';
+var PleaseEnter = ' ';
 var HybridTries = 2;
-var PartlyIncorrect = 'Your answer is partly wrong: ';
-var CorrectList = 'Correct answers: ';
-var NextCorrect = 'Next correct letter in the answer: ';
+var PartlyIncorrect = ' ';
+var CorrectList = 'Respuestas correctas:';
+var NextCorrect = ' ';
 var CurrBox = null;
 
 function TrackFocus(BoxID){
@@ -2014,7 +1772,7 @@ function ReplaceGuessBox(QNum, Ans){
 
 //CODE FOR HANDLING TIMER
 //Timer code
-var Seconds = 240;
+var Seconds = 180;
 var Interval = null;
 
 function StartTimer(){
@@ -2062,28 +1820,11 @@ function DownTime(){
 <!-- BeginTopNavButtons -->
 
 
-<div class="NavButtonBar" id="TopNavBar">
-
-
-<button class="NavButton" onclick="history.back(); return false;">&lt;=</button>
-
-
-
-<button class="NavButton" onclick="location='index.htm'; return false;"> Index </button>
-
-
-
-<button class="NavButton" onclick="location='representacion_test.htm'; return false;">=&gt;</button>
-
-
-</div>
-
-
 
 <!-- EndTopNavButtons -->
 
 <div class="Titles">
-	<h2 class="ExerciseTitle">TEMA: PROYECTO T&#x00C9;CNICO TEST</h2>
+	<h2 class="ExerciseTitle">TEMA: CIBERSEGURIDAD</h2>
 
 
 <div id="Timer"><span id="TimerText">&#160;&#160;</span></div>
@@ -2105,11 +1846,11 @@ function DownTime(){
 <div id="QNav" class="QuestionNavigation">
 
 <p style="text-align: right;">
-<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;"></button>
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;"> </button>
 </p>
 
 <div id="OneByOneReadout">
-<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;"></button>
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;"> </button>
 
 <span id="QNumReadout" class="QNum">&#160;</span>
 
@@ -2120,24 +1861,17 @@ function DownTime(){
 </div>
  
 <ol class="QuizQuestions" id="Questions">
-<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Los documentos que detallan la obra de un Proyecto T&#x00E9;cnico son ...</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El presupuesto</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Los planos</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El Pliego de Condiciones</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La memoria y sus anexos</li></ol></li>
-<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">El Proyecto T&#x00E9;cnico es el conjunto de planos, esquemas y ....................... explicativos utilizados para definir las condiciones de una obra, fabricaci&#x00F3;n, montaje, instalaci&#x00F3;n o m&#x00E1;quina.</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Dibujos</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Mapas</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Textos</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Bocetos</li></ol></li>
-<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">La fase del proyecto t&#x00E9;cnico de Tecnolog&#x00ED;a con la que verificamos que el objeto construido resuelve el problema que se plante&#x00F3; en un inicio, es la fase de .....</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Construcci&#x00F3;n</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Comprobaci&#x00F3;n</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Memoria</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Dise&#x00F1;o</li></ol></li>
-<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">La fase del proyecto t&#x00E9;cnico en la que se plasma el pensamiento mediante dibujos,bocetos y esquemas es la de ...</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La memoria y sus anexos</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Los planos</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El pliego de condiciones</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El presupuesto</li></ol></li>
-<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">Observar un objeto para comprenderlo es ............................ ese objeto.</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Investigar</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Interpretar</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Proyectar</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Analizar</li></ol></li>
-<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">El primer paso en la elaboraci&#x00F3;n de la memoria del proyecto t&#x00E9;cnico de tecnolog&#x00ED;a es ...</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Crear las fases del proyecto</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Dise&#x00F1;ar</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Elaborar un tabla de herramientas y materiales</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;planificar</li></ol></li>
-<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">El segundo paso en la elaboraci&#x00F3;n de la memoria del proyecto t&#x00E9;cnico de tecnolog&#x00ED;a es ...</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La planificaci&#x00F3;n.</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La tabla de herramientas y materiales.</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El Dise&#x00F1;o, en el que elaboramos los planos.</li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La construcci&#x00F3;n.</li></ol></li>
-<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">El tercer paso en la elaboraci&#x00F3;n de la memoria del proyecto t&#x00E9;cnico de tecnolog&#x00ED;a es ...</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La planificaci&#x00F3;n, por ejemplo haciendo una hoja de proceso.</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La tabla de herramientas y materiales.</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El Dise&#x00F1;o, en el que elaboramos los planos.</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La construcci&#x00F3;n.</li></ol></li>
-<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">La fase en la que procedemos a la elaboraci&#x00F3;n de los planos con los que definiremos las caracter&#x00ED;sticas de las piezas a emplear en la memoria del proyecto t&#x00E9;cnico de Tecnolog&#x00ED;a, es ..</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La construcci&#x00F3;n</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La planificaci&#x00F3;n</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La creaci&#x00F3;n de la tabla de herramientas y materiales</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El dise&#x00F1;o</li></ol></li>
-<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">Son apartados de la hoja de proceso son ...</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Operaciones ordenadas, materiales, Herramientas y m&#x00E1;quinas, instrumentos de medici&#x00F3;n y control y tiempo de ejecuci&#x00F3;n.</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La planificaci&#x00F3;n,construcci&#x00F3;n y comprobaci&#x00F3;n.</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La creaci&#x00F3;n de la tabla de herramientas y materiales</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El dise&#x00F1;o,construcci&#x00F3;n y comprobaci&#x00F3;n.</li></ol></li>
-<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">La fase en la que construimos el objeto propiamente dicho, preparamos cada una de las piezas que nos son necesarias y las montamos seg&#x00FA;n lo planificado con anterioridad, dando forma al proyecto previamente dise&#x00F1;ado, es ...</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La construcci&#x00F3;n</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El montaje</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La verificaci&#x00F3;n</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Preparaci&#x00F3;n del prototipo</li></ol></li>
-<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;les son las preguntas b&#x00E1;sicas a la hora de analizar un objeto?</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;&#x00BF;C&#x00F3;mo esta hecho o fabricado?, &#x00BF;para qu&#x00E9; sirve? y &#x00BF;c&#x00F3;mo funciona?.</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;&#x00BF;Para qu&#x00E9; sirve? y &#x00BF;Qui&#x00E9;n lo creo?</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;&#x00BF;A qui&#x00E9;n pertenece?&#x00BF;c&#x00F3;mo se construye? y &#x00BF;cu&#x00E1;nto puede durar?</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;&#x00BF;C&#x00F3;mo funciona?, &#x00BF;cu&#x00E1;nto puede durar? y &#x00BF;cu&#x00E1;nto vale?.</li></ol></li>
-<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">La fase en la que se determinan los pasos a seguir para la construcci&#x00F3;n del objeto se denomina ...</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Planificaci&#x00F3;n</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Dise&#x00F1;o</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Planos</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Montaje</li></ol></li>
-<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">La fase del proyecto t&#x00E9;cnico en la que se calcula el gasto que va a suponer la construcci&#x00F3;n de objeto o la obra es ...</div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El pliego de condiciones</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La memoria</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;El presupuesto</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Los planos</li></ol></li>
-<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">&#x00BF;C&#x00F3;mo se llama la metodolog&#x00ED;a utilizada en Tecnolog&#x00ED;a que permite llevar de manera pr&#x00E1;ctica al aula muchos de los contenidos explicados en las unidades?</div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Metodolog&#x00ED;a del Proyecto T&#x00E9;cnico</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Metodolog&#x00ED;a de Dise&#x00F1;o Proyecto Construcci&#x00F3;n</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Metodolog&#x00ED;a Constructiva</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Metodolog&#x00ED;a Constructivista</li></ol></li>
-<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">La primera fase del Proyecto T&#x00E9;cnico de Tecnolog&#x00ED;a es ...</div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Comprobaci&#x00F3;n</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Construcci&#x00F3;n</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Memoria</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;La identificaci&#x00F3;n del problema y la b&#x00FA;squeda de la mejor soluci&#x00F3;n</li></ol></li>
-<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">Las fases de proyecto t&#x00E9;cnico son: memoria y sus anexos, planos, pliego de condiciones y .................... </div><div class="ShortAnswer" id="Q_16_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_16_Guess" onfocus="TrackFocus('Q_16_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="11"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(16)">Pica aqui para validar tu respuesta</button></div></form></div></li>
-<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">Las fases del proyecto t&#x00E9;cnico de tecnolog&#x00ED;a son: identificaci&#x00F3;n del problema y b&#x00FA;squeda de la mejor soluci&#x00F3;n. memor&#x00ED;a (tabla de herramienta y materiales, dise&#x00F1;o y planificaci&#x00F3;n), construcci&#x00F3;n y ............</div><div class="ShortAnswer" id="Q_17_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_17_Guess" onfocus="TrackFocus('Q_17_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="12"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(17)">Pica aqui para validar tu respuesta</button></div></form></div></li></ol>
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Utiliza contrase&#x00F1;a seguras, combina may&#x00FA;sculas, ..,......., n&#x00FA;meros, caracteres especiales, s&#x00ED;mbolos, etc&#x00E9;tera.<br /></div><div class="ShortAnswer" id="Q_0_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_0_Guess" onfocus="TrackFocus('Q_0_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="10"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(0)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Descarga los programas desde sitios ........ o de confianza, analiza las descargas con el antivirus.</div><div class="ShortAnswer" id="Q_1_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_1_Guess" onfocus="TrackFocus('Q_1_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(1)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">Controla que al instalar un programa no se instalan otros no ..........</div><div class="ShortAnswer" id="Q_2_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_2_Guess" onfocus="TrackFocus('Q_2_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(2)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">Instala un ........., actual&#x00ED;zalo peri&#x00F3;dicamente y util&#x00ED;zalo.</div><div class="ShortAnswer" id="Q_3_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_3_Guess" onfocus="TrackFocus('Q_3_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(3)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">Mantener el sistema operativo ....... lo que permitir&#x00E1; mejoras en cuanto a la seguridad del mismo.</div><div class="ShortAnswer" id="Q_4_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_4_Guess" onfocus="TrackFocus('Q_4_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="11"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(4)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">Evita cuando te registres en alguna p&#x00E1;gina proporcional todos tus ......... reales, nombre, apellidos, fecha de nacimiento, direcci&#x00F3;n, etc&#x00E9;tera.</div><div class="ShortAnswer" id="Q_5_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_5_Guess" onfocus="TrackFocus('Q_5_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(5)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">Bloquea y cierra ...... en cada uno de los dispositivos que utilices una vez que haya terminado de utilizarlas.</div><div class="ShortAnswer" id="Q_6_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_6_Guess" onfocus="TrackFocus('Q_6_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(6)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">Desconf&#x00ED;a de los dispositivos externos desconocidos, conecta a tu ordenador solamente a ........... o duros externos seguros.</div><div class="ShortAnswer" id="Q_7_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_7_Guess" onfocus="TrackFocus('Q_7_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(7)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">Aplica filtros para que el correo derive los emails no deseados a la carpeta de ........., una opci&#x00F3;n posible cuando llegue el correo correspondiente es marcar como correo no deseado.</div><div class="ShortAnswer" id="Q_8_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_8_Guess" onfocus="TrackFocus('Q_8_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(8)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">Nunca abrir enlaces de correos no ......o sospechosos.</div><div class="ShortAnswer" id="Q_9_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_9_Guess" onfocus="TrackFocus('Q_9_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(9)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">Cuando navegues por Internet evita las p&#x00E1;ginas de origen sospechoso o que ofrecen premios o recompensas. Comprueba que la barra de navegaci&#x00F3;n aparece HTTPS y un ........ verde.</div><div class="ShortAnswer" id="Q_10_SA"><form method="post" autocomplete="off" onsubmit="return false;"><div><input type="text" autocomplete="off" id="Q_10_Guess" onfocus="TrackFocus('Q_10_Guess')" onblur="LeaveGap()" class="ShortAnswerBox" size="9"/><br /><br /><button class="FuncButton" onclick="CheckShortAnswer(10)">Pica aqu&#x00ED; para validar tu respuesta</button></div></form></div></li></ol>
 
 
 
@@ -2151,23 +1885,6 @@ function DownTime(){
 </div>
 
 <!-- BeginBottomNavButtons -->
-
-
-<div class="NavButtonBar" id="BottomNavBar">
-
-
-<button class="NavButton" onclick="history.back(); return false;">&lt;=</button>
-
-
-
-<button class="NavButton" onclick="location='index.htm'; return false;"> Index </button>
-
-
-
-<button class="NavButton" onclick="location='representacion_test.htm'; return false;">=&gt;</button>
-
-
-</div>
 
 
 
